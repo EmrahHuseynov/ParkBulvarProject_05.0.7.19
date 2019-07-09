@@ -1,0 +1,42 @@
+#about {
+background-image: url('../img/about/about_back.png');
+overflow-x: hidden;
+background-position: 14% 29%;
+background-size: 118%;
+background-repeat: no-repeat;
+  .row{
+      padding-bottom: 142px;
+      padding-top: 142px;
+  }
+  .left_side {
+    .img {
+        padding-top: 3%;
+      img {
+        display: inline-block;
+        margin-left: -18%;
+      }
+    }
+  }
+
+  .right_side {
+    .content {
+      padding-left: 11.5%;
+      padding-right: 23%;
+
+      h4 {
+        color: $color_gray;
+        margin-bottom: 16px;
+      }
+      h2 {
+        color: $color_darkblue;
+        margin-bottom: 49px;
+        font-size: 43px;
+        font-family: $font_angelica;
+      }
+      p {
+        color: $color_gray;
+        font-size: 19px;
+      }
+    }
+  }
+}

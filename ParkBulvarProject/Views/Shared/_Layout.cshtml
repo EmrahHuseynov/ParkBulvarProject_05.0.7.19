@@ -1,0 +1,269 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    string keywords = "";
+    string descriptions = "";
+    foreach (var item in db.seoKeyWords)
+    {
+        keywords += item.Word + ",";
+    }
+    foreach (var item in db.seoDescriptions)
+    {
+        descriptions += item.Word + ",";
+    }
+    if (keywords.Length > 0)
+    {
+        keywords = keywords.Remove(keywords.Length - 1); ;
+    }
+    if (descriptions.Length > 0)
+    {
+        descriptions = descriptions.Remove(descriptions.Length - 1); ;
+    }
+    string url = Context.Request.Path;
+    string lang = "az-Latn";
+    if (Context.Session.GetString("lang") != null)
+    {
+        lang = Context.Session.GetString("lang");
+    }
+    var generalinformation = db.generalInfos.FirstOrDefault();
+    var cntrl = this.ViewContext.RouteData.Values["controller"].ToString().ToLower();
+    var act = this.ViewContext.RouteData.Values["action"].ToString().ToLower();
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="@descriptions">
+    <meta name="keywords" content="@keywords">
+    <meta name="author" content="Media Balans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="~/assets/vendor/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/vendor/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/assets/css/responsive.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
+
+    @foreach (var item in db.metaTags)
+    {
+        @Html.Raw(item.TagName)
+    }
+    <title>Park Bulvar</title>
+</head>
+<body>
+    <!-- search start -->
+    <div id="mainSearch">
+        <form asp-action="Search" asp-controller="Home" method="post">
+            <div class="content">
+                <img src="~/assets/img/close.png" class="close_s" alt="">
+                <input name="keyword" type="text" required placeholder="Axtarış edin...">
+            </div>
+        </form>
+
+       
+
+    </div>
+    <!-- search end -->
+    <!-- top header start -->
+    <section id="topHeader">
+        <div class="container">
+            <div class="row wrapper">
+                <div class="col-md-6">
+                    <div class="left_side">
+                        @if (generalinformation != null)
+                        {
+                            <ul>
+                                <li>
+                                    <p class="size15_r"><i class="fas fa-phone"></i> @generalinformation.Phone</p>
+                                </li>
+                                <li>
+                                    <p class="size15_r"><i class="far fa-clock"></i>@generalinformation.WorkHours</p>
+                                </li>
+                                <li>
+                                    <p class="size15_r"><i class="fas fa-map-marker-alt"></i> Yolu Göstər</p>
+                                </li>
+                            </ul>
+                        }
+
+
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="right_side">
+                        <ul>
+                            <li>
+                                <a class="size15_r" href="/home/contact/">
+                                    Əlaqə
+                                </a>
+                            </li>
+                            <li>
+                                <a class="size15_r" href="/home/model/">
+                                    Sxem
+                                </a>
+                            </li>
+                            @foreach (var item in db.socialLinks)
+                            {
+                                <li>
+                                    <a href="@item.Link" target="_blank">
+                                        <i class="@item.Icon"></i>
+                                    </a>
+                                </li>
+                            }
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- top header end -->
+    <!-- navbar start -->
+    <section id="navbar">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="/">
+                    <img src="~/assets/img/logo/park_bulvar_logo.png" alt="">
+                </a>
+                <button style="outline: none" class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i style="color: #38548a" class="fa fa-bars"></i>
+                    </span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <span class="line"></span>
+                        <li class="nav-item @(cntrl=="home"&&act=="index" ? "active_li" : "") " data-left="2%">
+                            <a class="nav-link size20_r" href="/">Ana səhifə<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item @(cntrl=="shops" ? "active_li" : "") " data-left="24.5%">
+                            <a class="nav-link size20_r" href="/shops/">Mağazalar<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  @(cntrl=="news" ? "active_li" : "") " data-left="47%">
+                            <a class="nav-link size20_r" href="/news/">Xəbərlər<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item  @(cntrl=="home"&&act=="about" ? "active_li" : "")" data-left="67%">
+                            <a class="nav-link size20_r" href="/home/about/">Haqqımızda<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown language">
+                            <a class="nav-link dropdown-toggle size20_r" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @db.languages.First(x => x.Code == lang).Name
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                @foreach (var item in db.languages)
+                                {
+                                    <a class="dropdown-item size20_r @(item.Code==lang ? "active" : "")" href="/language/change/?culture=@item.Code&returnUrl=@url">@item.Name</a>
+                                }
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <button class="my-2 my-sm-0 search iconka"><i class="fas fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- navbar end -->
+    @RenderBody()
+
+    <!-- footer start -->
+
+    <section id="footer">
+        <div class="container">
+            <div class="row up_footer">
+                <div class="col-md-4 col-lg-5 col-xl-6">
+                    <div class="left-side">
+                        <img src="~/assets/img/footer/park_bulvar_logo_big.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <div class="right_side">
+                        <ul class="foot_navbar ">
+                            <li> <a class="size20_r" href="/">Ana səhifə</a> </li>
+                            <li> <a class="size20_r" href="/shops/">Mağazalar</a> </li>
+                            <li> <a class="size20_r" href="/news/">Xəbərlər</a> </li>
+                            <li> <a class="size20_r" href="/home/about/">Haqqımızda</a> </li>
+                        </ul>
+
+                        <div class="subscribe">
+                            <form id="followusform" method="post">
+                                <p class="size15_r">Abunə olun və yeniliklərdən xəbərdar olun!</p>
+                                <input type="email" class="form-control" required placeholder="E-mail">
+                                <button type="submit">
+                                    <img src="~/assets/img/footer/abune_arrow.png" alt="">
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row bottom_footer">
+                <div class="col-md-8 col-lg-9">
+                    <div class="left_side">
+                        <ul>
+                            <li>
+                                <p>
+                                    @foreach (var item in db.socialLinks)
+                                    {
+                                        <a href="@item.Link" target="_blank">
+                                            <i class="@item.Icon"></i>
+                                        </a>
+                                    }
+                                </p>
+                            </li>
+                            @if (generalinformation != null)
+                            {
+                                <li>
+                                    <p class="size15_r"><i class="fas fa-phone mr-2"></i> @generalinformation.Phone</p>
+                                </li>
+                                <li>
+                                    <p class="size15_r"><i class="far fa-clock mr-2"></i>@generalinformation.WorkHours</p>
+                                </li>
+                                <li>
+                                    <p class="size15_r"><i class="fas fa-map-marker-alt mr-2"></i> Bakı, Azərbaycan</p>
+                                </li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="right_side">
+                        <p class="size15_r">Ⓒ @DateTime.Now.Year Park Bulvar</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer end -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/assets/vendor/OwlCarousel/dist/owl.carousel.min.js"></script>
+    <!-- <script src="~/assets/vendor/OwlCarousel/dist/owl.carousel2.thumbs.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js
+
+"></script>
+    @RenderSection("scripts",false)
+</body>
+
+</html>

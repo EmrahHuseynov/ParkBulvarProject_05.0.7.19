@@ -1,0 +1,240 @@
+﻿@model ParkBulvarProject.Models.ViewModels.HomeIndexViewModel
+@{ 
+    string lang = ViewBag.lang;
+}
+<!-- main slider start -->
+
+<section id="mainSlider">
+    <div class="mainSlider">
+        <div class="owl-carousel owl-theme">
+            @foreach (var item in Model.slideritems)
+            {
+            <div class="item">
+                @if (item.Link != null || item.Link != string.Empty)
+                {
+                <a href="@item.Link" target="_blank">
+                    <img src="~/assets/img/mainSlider/@item.Image" alt="Park Bulvar">
+                </a>
+                }
+                else
+                {
+                  <img src="~/assets/img/mainSlider/@item.Image" alt="Park Bulvar">
+                }
+            </div>
+            }
+        </div>
+        <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+        <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+    </div>
+</section>
+
+<!-- main slider end -->
+
+
+
+
+<div class="slidersBackground ">
+
+
+    <!-- icon slider start -->
+    <section id="iconSlider">
+        <div class="container">
+            <div class="iconSlider">
+                <div class="owl-carousel owl-theme">
+                    @{
+                        int i = 1;
+                    }
+                    @foreach (var item in Model.shopcategories)
+                    {
+                        var dic = item.ShopCategoryDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                        if (dic != null)
+                        {
+                            <div class="item">
+                                <a href="/shops/categories/@item.Id" class="icon_overlay" style="background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(/assets/img/iconSlider/@item.CoverImage) no-repeat center center;
+                           background-size: cover;">
+                                    <div class="content">
+                                        <h2>@i</h2>
+                                        <h4 class="size20_m">@dic.Name</h4>
+                                    </div>
+                                </a>
+                                <div class="img">
+                                    <img src="~/assets/img/iconSlider/@item.Logo" alt="">
+                                    <h4 class="size20_m">@dic.Name</h4>
+                                </div>
+                            </div>
+                            i++;
+                        }
+                    }
+                </div>
+                <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- icon slider start -->
+    <!-- event slider start -->
+
+    <section id="eventSlider">
+        <div class="container">
+            <ul class="headers">
+                <li class="active_li aksiya">
+                    <span class="line"></span>
+                    <p class="size35_angel">Aksiyalar</p>
+                </li>
+                <li class="tedbir">
+                    <span class="line"></span>
+                    <p class="size35_angel">Tədbirlər</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="aksiyaSlider">
+            <div class="owl-carousel owl-theme">
+                @foreach (var item in Model.compaigns)
+                {
+                    var dic = item.CompaignDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                    if (dic != null)
+                    {
+                        <div class="item">
+                            <a href="#" class="overlay"></a>
+                            <div class="img">
+                                <img src="/assets/img/eventSlider/@item.Image" alt="Park Bulvar">
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    @if (item.Shop.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang) != null)
+                                    {
+                                        <li>
+                                            <h4 class="size20_sb">@item.Shop.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang).Name</h4>
+                                        </li>
+                                    }
+
+                                    <li>
+                                        <h4 class="size20_angel">@dic.Name</h4>
+                                    </li>
+                                    <li>
+                                        <p class="size15_r">@dic.Duration</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="container">
+                <div class="row buttons">
+                    <div class="col-md-6">
+                        <div class="left_side">
+                            <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                            <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right_side text-right">
+                            <a href="/campaigns/" class="main_btn size20_m">Hamısına bax</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tedbirSlider">
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    @foreach (var item in Model.events)
+                    {
+                        var dic = item.NewsDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                        if (dic != null)
+                        {
+                            <div class="item">
+                                <a href="#" class="overlay"></a>
+                                <div class="img">
+                                    <img src="~/assets/img/newsList/@item.TitleImage" alt="Park Bulvar">
+                                </div>
+                                <div class="content">
+                                    <ul>
+                                        <li>
+                                            <h4 class="size20_sb">@dic.Title</h4>
+                                        </li>
+
+                                        <li>
+                                            <p class="size15_r">@item.dateTime.Day-@item.dateTime.Month-@item.dateTime.Year</p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="row buttons">
+                    <div class="col-md-6">
+                        <div class="left_side">
+                            <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                            <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="right_side text-right">
+                            <a href="/campaigns/" class="main_btn size20_m">Hamısına bax</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recent slider end -->
+</div>
+
+
+
+
+
+
+<!-- gallery slider start -->
+<section id="gallerySlider">
+    <div class="container">
+        <div class="header">
+            <span class="line mb-1"></span>
+            <h4 class="size35_angel">Qalereya</h4>
+        </div>
+
+    </div>
+
+    <div class="gallerySlider">
+        <div class="owl-carousel owl-theme">
+            @foreach (var item in Model.galleryimages)
+            {
+                <div class="item">
+                    <a href="#" class="overlay">
+                        <img src="~/assets/img/gallerySlider/zoom_big(1).png" alt="Park Bulvar">
+                    </a>
+                    <div class="img">
+                        <img src="~/assets/img/gallerySlider/@item.Image" alt="Park Bulvar">
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="buttons">
+            <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+            <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+        </div>
+    </div>
+
+
+
+</section>
+
+
+<!-- gallery slider end -->

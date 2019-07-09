@@ -1,0 +1,111 @@
+#footer {
+  padding-top: 39px;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  .up_footer {
+
+    .right_side {
+      ul.foot_navbar {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 47px;
+        margin-bottom: 0px;
+        li {
+          a {
+            color: #242424;
+            padding-right: 49px;
+            text-decoration: none;
+          }
+          &:last-child {
+            a {
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+
+      .subscribe{
+          text-align: right;
+          p{
+              text-align: left;
+              padding-left: 5%;
+              margin-bottom: 14px;
+          }
+
+        form{
+            width: 70%;
+            display: inline-block;
+            position: relative;
+
+            input{
+                padding: 15px 55px 15px 33px;
+                height: 50px;
+                border-radius: 25px;
+                background-color: #f2f2f2;
+                border:none;
+                &::-webkit-input-placeholder{
+                    color: $color_blue;
+                    opacity: 0.61;
+                    font-size: 15px;
+                    font-family: $font_regular;
+                }
+
+                &:focus{
+                    box-shadow: unset;
+                }
+            }
+
+            button{
+                position: absolute;
+                right: 5%;
+                top: 57%;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+    
+    
+
+      }
+    }
+  }
+  .bottom_footer{
+      padding-top: 55px;
+
+    .left_side{
+        ul{
+            display: flex;
+            li{
+         
+                p{
+                    padding-right: 41px;
+                    i{
+                        font-size: 22px;
+                    }
+                }
+
+                &:first-child{
+                    p{
+                        a{
+                            color: #242424;
+                            display: inline-block;
+                            padding-right: 25px;
+                            &:last-child{
+                                padding-right: 0px;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right_side{
+        p{
+            text-align: right;
+        }
+    }
+  }
+}

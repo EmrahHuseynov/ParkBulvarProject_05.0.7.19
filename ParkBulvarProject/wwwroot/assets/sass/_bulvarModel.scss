@@ -1,0 +1,191 @@
+#bulvarModel {
+  padding-top: 69px;
+  padding-bottom: 60px;
+  background-image: url("../img/bulvarModel/bulvarModel_back.png");
+  background-size: 123%;
+   background-position: 80% 10%;
+  background-repeat: no-repeat;
+  .col-md-8 {
+    padding-right: 0px;
+  }
+  .left_side {
+    padding-top: 27px;
+    background-color: #efefef;
+    border-radius: 20px;
+    padding-bottom: 65px;
+    height: 100%;
+    .owl-carousel {
+      .item {
+        .svg_box {
+          height: 357px;
+          width: 100%;
+          svg {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .owl-dots {
+        display: block;
+        position: absolute;
+        bottom: -26%;
+        left: 6%;
+        .owl-dot {
+          outline: none;
+          span {
+            margin: 0px;
+            margin-right: 19px;
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            color: #242424;
+            background-color: #fff;
+            font-size: 16px;
+            font-family: $font_semibold;
+          }
+          &.active {
+            span {
+              color: white;
+              background-color: #242424;
+            }
+          }
+          &:hover {
+            span {
+              color: white;
+              background-color: #242424;
+            }
+          }
+        }
+      }
+    }
+    .mertebe {
+      padding: 0px 0px 38px 52px;
+    }
+  }
+  .right_side {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    .img {
+      height: 195px;
+      img {
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      hr {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .head {
+        padding: 13px 35px 22px 19px;
+        h4 {
+          margin-bottom: 11px;
+        }
+        p {
+          font-size: 11.5px;
+          font-family: $font_medium;
+          color: #242424;
+          margin-bottom: 0px;
+        }
+      }
+
+      .body {
+        padding: 13px 7px 22px 19px;
+        h6 {
+          color: $color_blue;
+          margin-bottom: 13px;
+          i {
+            margin-right: 13px;
+            font-size: 18px;
+          }
+        }
+
+        ul.work_dates {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0px;
+          li {
+            cursor: pointer;
+            transition: all 0.3s linear;
+            margin-bottom: 0px;
+            h6 {
+              color: #242424;
+            }
+            p {
+              margin-bottom: 0px;
+            }
+
+            &:hover {
+              font-family: $font_semibold;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .foot {
+          padding: 13px  35px  22px  19px;
+        ul.adress {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0px;
+          li{
+              margin-bottom: 0px;
+              p{
+                  color: $color_blue;
+                  margin-bottom: 0px;
+
+                  i{
+                      padding-right: 10px;
+                      font-size: 17px;
+
+                  }
+                  span{
+                      color: #242424;
+                      display: inline-block;
+                      padding-left: 10px;
+                  }
+              }
+
+
+          }
+        }
+      }
+    }
+  }
+}
+
+#modelAksiyalar{
+  background-color: #f8f8f8;
+  padding-top: 53px;
+  padding-bottom: 120px;
+
+  #eventSlider{
+    padding-bottom: 0px;
+
+    ul.headers{
+      padding-bottom: 40px;
+    }
+    .aksiyaSlider{
+      .owl-carousel{
+        .owl-item{
+          z-index: 22;
+        }
+      }
+
+
+      &.bitmis{
+        display: none;
+      }
+    }
+  }
+
+}

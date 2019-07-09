@@ -1,0 +1,84 @@
+﻿@model ParkBulvarProject.Models.Entities.Tables.AboutUsPage
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="card">
+    <div class="card-header">
+        Yenisini əlavə et
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-12 mt-4 wrapper">
+                            <input asp-for="Image" class="form-control d-none" />
+                            <label class="btn btn-success" for="image">Şəkil Yüklə</label>
+                            <input id="image" type="file" name="img" value="" class="d-none imginput" /> <br />
+                            <img src="#" class="editedImage newimage" style="display:none;" width="100" height="100" alt="Alternate Text" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Tərcümə olunacaq dillər
+                                </div>
+                                <div class="card-body">
+                                    <ul class="nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+                                        @{
+                                            int b = 0;
+                                        }
+                                        @foreach (var item in db.languages)
+                                        {
+                                            <li style="width:32%" class="nav-item ml-2 bg-secondary ">
+                                                <a class="nav-link @(b==0 ? "active" : "") text-white" id="pills-@item.Code-tab" data-toggle="pill" href="#pills-@item.Code" role="tab" aria-controls="pills-home" aria-selected="true">@item.Name</a>
+                                            </li>
+                                            b++;
+                                        }
+                                    </ul>
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-6 col-6">
+                                            <div class="tab-content" id="pills-tabContent ">
+                                                @{
+                                                    int i = 0;
+                                                }
+                                                @foreach (var item in db.languages)
+                                                {
+                                                <div class="col-md-12 col-12 tab-pane fade @(i==0 ? "show active" : "")" id="pills-@item.Code" role="tabpanel">
+                                                    <label>Başlıq</label>
+                                                    <input type="text" class="form-control" name="Dictionary[@i].Title" value="" />
+                                                    <label>Mətn</label>
+                                                    <textarea rows="4" cols="4" type="text" class="form-control" name="Dictionary[@i].Text" ></textarea>
+                                                    <input type="hidden" class="form-control" name="Dictionary[@i].LanguageId" value="@item.Id" />
+                                                </div>
+                                                    i++;
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-12 mt-3">
+                        <a class="btn btn-dark" asp-action="index"><i class="fas fa-undo"></i> Siyahıya geri dön</a>
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+

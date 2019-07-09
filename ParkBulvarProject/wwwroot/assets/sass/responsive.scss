@@ -1,0 +1,1323 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  // umumi seyler start
+  .size20_r,
+  .size20_m,
+  .size20_sb,
+  .size20_angel {
+    font-size: 17px !important;
+  }
+
+  .size35_angel,
+  .size35_r {
+    font-size: 25px !important;
+  }
+  .size25_r,
+  .size25_sb,
+  .size25_m,
+  .size25_angel {
+    font-size: 21px !important;
+  }
+  .line {
+    width: 60px !important;
+  }
+
+  .main_btn {
+    padding: 12px 22px 10px !important;
+  }
+
+  .slider_btn {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 17px !important;
+    &.next_btn {
+      right: 20px !important;
+    }
+    &.prev_btn {
+      left: 20px !important;
+    }
+  }
+  // umumi seyler end
+
+  // top header start
+  #topHeader {
+    .wrapper {
+      .left_side {
+        ul {
+          justify-content: center;
+          li {
+            margin-right: 20px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      .right_side {
+        ul {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  // top header end
+
+  // navbar start
+  #navbar {
+    .navbar {
+      .navbar-brand {
+        img {
+          max-width: 110px;
+        }
+      }
+    }
+  }
+  // navbar end
+
+  //   event slider start
+  #eventSlider {
+    padding-bottom: 60px;
+    ul.headers {
+      li {
+        padding-right: 60px;
+        &:last-child {
+          padding-right: 0px;
+        }
+      }
+    }
+
+    .buttons {
+      padding-top: 0px !important;
+      .left_side,
+      .right_side {
+        text-align: center !important;
+      }
+      .left_side {
+        margin-bottom: 5%;
+        .slider_btn {
+          line-height: 35px !important;
+        }
+      }
+    }
+  }
+  // event slider end
+
+  // gallery slider start
+
+  #gallerySlider {
+    .gallerySlider {
+      .buttons {
+        .slider_btn {
+          line-height: 35px !important;
+        }
+      }
+    }
+  }
+
+  // gallery slider end
+
+  //   footer start
+  #footer {
+    .up_footer {
+      .left-side {
+        text-align: center;
+        img {
+          width: 180px;
+        }
+      }
+      .right_side {
+        ul.foot_navbar {
+          display: block;
+          text-align: center;
+          padding-top: 25px;
+          li {
+            margin-bottom: 2%;
+            &:last-child {
+              margin-bottom: 0%;
+            }
+            a {
+              padding-right: 0px;
+            }
+          }
+        }
+        .subscribe {
+          text-align: center;
+          form {
+            width: 100%;
+          }
+          p {
+            font-size: 14px;
+          }
+          button {
+            right: 4%;
+            top: 64%;
+          }
+        }
+      }
+    }
+    .bottom_footer {
+      .left_side {
+        ul {
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          li {
+            p {
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+      .right_side {
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // footer end
+
+  //   kategoriya magazalar start
+  #kategoriyaMagazalar {
+    .magazalar {
+      .magaza {
+        width: 100% !important;
+      }
+    }
+  }
+  //   kategoriya magazalar end
+
+  // butun aksiyalar start
+  #butunAksiyalar {
+    .aksiyalar {
+      .mainDiv {
+        max-width: unset !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-right: 0px !important;
+      }
+    }
+  }
+  // butun aksiyalar end
+
+  //   about start
+  #about {
+    .row {
+      padding-bottom: 120px;
+      padding-top: 100px;
+
+      .left_side {
+        .img {
+          img {
+            width: 450px;
+          }
+        }
+      }
+      .right_side {
+        .content {
+          padding-top: 2%;
+          padding-left: 6%;
+          padding-right: 6%;
+          h2 {
+            margin-bottom: 35px;
+            font-size: 30px;
+          }
+          p {
+            font-size: 16px !important;
+          }
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   contact start
+
+  #contact {
+    .background {
+      height: 240px;
+    }
+    .contact {
+      .wrapper {
+        height: auto;
+        .left_side,
+        .right_side {
+          width: 100%;
+          height: 350px;
+        }
+
+        .left_side {
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: unset;
+        }
+        .right_side {
+          padding: 30px 20px 25px 20px;
+          ul.info {
+            li {
+              margin-bottom: 20px;
+              p {
+                font-size: 17px;
+              }
+            }
+          }
+          ul.social {
+            left: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // contact end
+
+  //   news main header start
+  #newsMainHeader {
+    height: 270px;
+    .content {
+      padding-top: 49px;
+      p {
+        font-size: 15.5px !important;
+        width: 100%;
+      }
+    }
+  }
+  //   news main header end
+
+  //   xeber detali start
+  #esasXeber {
+    .xeberSlider {
+      .owl-carousel {
+        .item {
+          height: 210px !important;
+        }
+      }
+
+      .slider_btn {
+        line-height: 35px;
+      }
+    }
+
+    .xeberInfo {
+      padding: 39px 4px 60px;
+      .content {
+        .head {
+          margin-bottom: 35px;
+          flex-wrap: wrap;
+          ul {
+            width: 100%;
+            &:last-child {
+              justify-content: flex-start;
+
+              li {
+                a {
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // xeber detali end
+
+  //   diger xeber slider start
+  #digerXeber {
+    padding-top: 0px;
+
+    .left_side {
+      padding-left: 25px;
+      .content {
+        .slider_btn {
+          line-height: 35px;
+        }
+      }
+    }
+
+    .right_side {
+      .owl-carousel {
+        .item {
+          .content {
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  // diger xeber slider end
+
+  //   bulvar model start
+
+  #bulvarModel {
+
+    .col-md-8{
+        padding-left: 0px;
+    }
+    .left_side {
+    
+      .owl-carousel {
+        .item {
+          .svg_box {
+            height: 153px;
+          }
+        }
+
+        .owl-dots {
+          display: inline-flex;
+          bottom: -44%;
+          left: 7%;
+          button {
+            span {
+              width: 35px !important;
+              height: 35px !important;
+              line-height: 35px !important;
+              margin-right: 7px !important;
+              font-size: 14px !important;
+            }
+          }
+        }
+      }
+
+      .mertebe{
+        padding: 0px 0px 3px 29px;
+      }
+    }
+
+    .right_side{
+        margin-top: 13%;
+        .content{
+            .body{
+                // padding: 13px 20px 20px 25px;
+                ul.work_dates{
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    li{
+                        margin-bottom: 13px;
+                        width: 26%;
+                    }
+                }
+            }
+            .foot{
+                ul.adress{
+
+                    flex-wrap: wrap;
+                    justify-content: unset;
+                    li{
+                        &:first-child{
+                            margin-right: 5%;
+                            margin-bottom: 2%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+  }
+
+  // bulvar model end
+}
+@media screen and (min-width: 320px) and (max-width: 990px) {
+  // navbar start
+  #navbar {
+    .navbar {
+      ul.navbar-nav {
+        text-align: center;
+        span.line {
+          display: none;
+        }
+        li {
+          a {
+            padding-right: 0px !important;
+          }
+          &:last-child {
+            .dropdown-menu.show {
+              display: inline-block;
+              min-width: 130px !important;
+
+              a {
+                padding: 0.25rem 0rem !important;
+              }
+            }
+          }
+        }
+      }
+
+      .search.iconka {
+        display: none;
+      }
+    }
+  }
+
+  // navbar end
+
+  // icon slider start
+  #iconSlider {
+    padding-bottom: 60px;
+    .iconSlider {
+      .owl-carousel {
+        .owl-item {
+          .item {
+            .img {
+              img {
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // icon slider end
+
+  // gallery slider start
+
+  #gallerySlider {
+    .gallerySlider {
+      .owl-carousel {
+        .owl-stage {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  // gallery slider end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      .content {
+        padding: unset !important;
+      }
+      &.left_mobile {
+        display: block;
+      }
+      &.left {
+        display: none;
+      }
+
+      &.right {
+        .right_side {
+          width: 100%;
+          //   img {
+          //     height: auto;
+          //     min-height: 200px;
+          //     max-height: 440px;
+          //   }
+        }
+        .left_side {
+          width: 100%;
+          .content {
+            .fix_background {
+              width: 100%;
+            }
+            .head {
+              padding-bottom: 30px;
+            }
+            padding: unset;
+            .body {
+              padding-bottom: 20px;
+              h2 {
+                font-size: 23px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+}
+
+@media screen and (min-width: 320px) and (max-width: 1600px) {
+  // gallery slider start
+
+  #gallerySlider {
+    .gallerySlider {
+      .owl-carousel {
+        .owl-stage {
+          .owl-item {
+            .item {
+              .img {
+                height: 330px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // gallery slider end
+}
+@media screen and (min-width: 768px) and (max-width: 1390px) {
+  // umumi seyler start
+  .size20_r,
+  .size20_m,
+  .size20_sb,
+  .size20_angel {
+    font-size: 18.5px !important;
+  }
+
+  .size35_angel,
+  .size35_r {
+    font-size: 30px !important;
+  }
+  // umumi seyler end
+
+  //   news main header start
+  #newsMainHeader {
+    .content {
+      p {
+        width: 70%;
+      }
+    }
+  }
+  //   news main header end
+}
+
+@media screen and (min-width: 320px) and (max-width: 424px) {
+  // main slaider start
+  #mainSlider {
+    height: 200px;
+  }
+
+  // main slider end
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  // icon slider start
+  #iconSlider {
+    .iconSlider {
+      .owl-carousel {
+        .owl-item {
+          .item {
+            width: auto;
+            height: 190px;
+          }
+        }
+      }
+    }
+  }
+
+  // icon slider end
+
+  // gallery slider start
+
+  #gallerySlider {
+    .gallerySlider {
+      .owl-carousel {
+        .owl-stage {
+          .owl-item {
+            .item {
+              .img {
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // gallery slider end
+
+  //   about start
+  #about {
+    .row {
+      padding-bottom: 120px;
+      padding-top: 100px;
+
+      .left_side {
+        .img {
+          img {
+            width: 450px;
+          }
+        }
+      }
+      .right_side {
+        .content {
+          padding-top: 2%;
+          padding-left: 6%;
+          padding-right: 6%;
+          h2 {
+            margin-bottom: 35px;
+            font-size: 30px;
+          }
+          p {
+            font-size: 16px !important;
+          }
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      &.right {
+        .right_side {
+          img {
+            max-height: 220px;
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+}
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  //   about start
+  #about {
+    .row {
+      .left_side {
+        .img {
+          img {
+            width: 480px;
+          }
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      &.right {
+        .right_side {
+          img {
+            max-height: 250px;
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  // main slaider start
+  #mainSlider {
+    height: 290px;
+  }
+
+  // main slider end
+
+  //   footer start
+  #footer {
+    .bottom_footer {
+      .left_side {
+        ul {
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+
+  // footer end
+
+  // butun aksiyalar start
+  #butunAksiyalar {
+    .aksiyalar {
+      .mainDiv {
+        .aksiya {
+          .img {
+            min-height: 250px;
+          }
+        }
+      }
+    }
+  }
+
+  // butun aksiyalar end
+
+  //   about start
+  #about {
+    .row {
+      .left_side {
+        .img {
+          img {
+            width: 550px;
+          }
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      &.right {
+        .right_side {
+          img {
+            max-height: 325px;
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  // top header start
+  #topHeader {
+    .wrapper {
+      .left_side {
+        ul {
+          li {
+            margin-bottom: 2%;
+            &:last-child {
+              margin-bottom: 0%;
+            }
+          }
+        }
+      }
+    }
+  }
+  // top header end
+
+  // main slaider start
+  #mainSlider {
+    height: 330px;
+  }
+
+  // main slider end
+
+  // icon slider start
+  #iconSlider {
+    .iconSlider {
+      .slider_btn {
+        &.prev_btn {
+          left: -5.5%;
+        }
+        &.next_btn {
+          right: -5.5%;
+        }
+      }
+    }
+  }
+  // icon slider end
+
+  //   footer start
+  #footer {
+    .up_footer {
+      .left-side {
+        img {
+          width: 230px;
+        }
+      }
+      .right_side {
+        ul.foot_navbar {
+          li {
+            a {
+              padding-right: 28px;
+              font-size: 16.5px !important;
+            }
+          }
+        }
+        .subscribe {
+          form {
+            width: 80%;
+          }
+        }
+      }
+    }
+    .bottom_footer {
+      .left_side {
+        ul {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  // footer end
+
+  //   kategoriya magazalar start
+  #kategoriyaMagazalar {
+    .magazalar {
+      .magaza {
+        width: 33.33% !important;
+      }
+    }
+  }
+  //   kategoriya magazalar end
+
+  // butun aksiyalar start
+  #butunAksiyalar {
+    .aksiyalar {
+      .mainDiv {
+        max-width: unset !important;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+
+        margin-right: 0px !important;
+        .aksiya {
+          width: 310px;
+        }
+
+        &:nth-child(2n + 2) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  // butun aksiyalar end
+
+  //   about start
+  #about {
+    .row {
+      .right_side {
+        .content {
+          padding-left: 4.5%;
+          padding-right: 4.5%;
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   contact start
+
+  #contact {
+    .background {
+      height: 390px;
+    }
+    .contact {
+      margin-top: -25%;
+      .wrapper {
+        height: 410px;
+        .left_side {
+          width: 60%;
+        }
+        .right_side {
+          width: 40%;
+          padding: 41px 14px 25px 20px;
+          ul.social {
+            left: 20px;
+            bottom: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  // contact end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      &.right {
+        .right_side {
+          img {
+            max-height: 420px;
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+
+  //   xeber detali start
+  #esasXeber {
+    .xeberSlider {
+      .owl-carousel {
+        .item {
+          height: 350px !important;
+        }
+      }
+
+      .slider_btn {
+        &.next_btn {
+          right: 25px;
+        }
+        &.prev_btn {
+          right: 25px;
+        }
+      }
+    }
+
+    .xeberInfo {
+      padding: 39px 29px 73px;
+    }
+  }
+
+  // xeber detali end
+
+  //   diger xeber slider start
+  #digerXeber {
+    padding-top: 0px;
+
+    .left_side {
+      padding-left: 64px;
+    }
+  }
+
+  // diger xeber slider end
+
+
+    //   bulvar model start
+
+    #bulvarModel {
+        .right_side{
+            margin-top: 8%;
+            .img{
+                height:330px ;
+            }
+
+        }
+      }
+    
+      // bulvar model end
+}
+
+@media screen and (min-width: 991px) and (max-width: 1390px) {
+  // top header start
+  #topHeader {
+    .wrapper {
+      .left_side {
+        ul {
+          li {
+            margin-right: 16px;
+            &:last-child {
+              margin-bottom: 0%;
+            }
+            i {
+              margin-right: 12px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  // top header end
+
+  // main slaider start
+  #mainSlider {
+    height: 400px;
+  }
+
+  // main slider end
+
+  // icon slider start
+  #iconSlider {
+    padding-bottom: 60px;
+    .iconSlider {
+      .owl-carousel {
+        .owl-item {
+          .item {
+            .img {
+              img {
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // icon slider end
+
+  //   footer start
+  #footer {
+    .up_footer {
+      .left-side {
+        img {
+          width: 290px;
+        }
+      }
+      .right_side {
+        ul.foot_navbar {
+          li {
+            a {
+              padding-right: 45px;
+            }
+          }
+        }
+      }
+    }
+    // .bottom_footer {
+    //   .left_side {
+    //     ul {
+    //       flex-wrap: wrap;
+    //     }
+    //   }
+    // }
+  }
+
+  // footer end
+
+  //   kategoriya magazalar start
+  #kategoriyaMagazalar {
+    .magazalar {
+      .magaza {
+        width: 25% !important;
+      }
+    }
+  }
+  //   kategoriya magazalar end
+
+  // butun aksiyalar start
+  #butunAksiyalar {
+    .aksiyalar {
+      .mainDiv {
+        max-width: unset !important;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+
+        margin-right: 0px !important;
+        .aksiya {
+          width: 290px;
+        }
+
+        &:nth-child(3n + 3) {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  // butun aksiyalar end
+
+  //   about start
+  #about {
+    .row {
+      .left_side {
+        .img {
+          img {
+            width: 1150px;
+            margin-left: -10%;
+          }
+        }
+      }
+      .right_side {
+        .content {
+          padding-left: 4.5%;
+          padding-right: 4.5%;
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   contact start
+
+  #contact {
+    .background {
+      height: 400px;
+    }
+    .contact {
+      margin-top: -20%;
+      .wrapper {
+        .right_side {
+          padding: 41px 20px 25px 20px;
+          ul.social {
+            left: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  // contact end
+
+  //   xeberler siyahisi start
+  #xeberlerList {
+    .xeber {
+      .right_side {
+        img {
+          max-height: 325px;
+        }
+      }
+      .left_side {
+        .content {
+          .body {
+            padding-bottom: 10px !important;
+          }
+          .foot {
+            .main_btn {
+              padding-right: 37px !important;
+              padding-left: 37px !important;
+              font-size: 15.5px !important;
+            }
+          }
+        }
+      }
+
+      &.left {
+        .left_side {
+          .content {
+            padding: 0px 18px 5px 0px;
+          }
+        }
+      }
+
+      &.right {
+        .left_side {
+          .content {
+            padding: 0px 0px 5px 18px !important;
+          }
+        }
+      }
+    }
+  }
+  //   xeberler siyahisi end
+
+  //   xeber detali start
+  #esasXeber {
+    .xeberSlider {
+      .owl-carousel {
+        .item {
+          height: 450px !important;
+        }
+      }
+    }
+
+    .xeberInfo {
+      padding: 39px 49px 73px;
+    }
+  }
+
+  // xeber detali end
+
+  //   diger xeber slider start
+  #digerXeber {
+    .left_side {
+      padding-left: 81px;
+      .content {
+        p {
+          font-size: 16px !important;
+        }
+      }
+    }
+
+    .right_side {
+      .owl-carousel {
+        .item {
+          .content {
+            padding: 19px 13px;
+            height: 287px;
+            ul {
+              .body {
+                margin-bottom: -4px;
+                h4 {
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // diger xeber slider end
+
+
+  
+    //   bulvar model start
+
+    #bulvarModel {
+        .right_side{
+            margin-top: 8%;
+            .img{
+                height:440px ;
+            }
+
+        }
+      }
+    
+      // bulvar model end
+}
+
+@media screen and (min-width: 1391px) and (max-width: 1590px) {
+  // main slaider start
+  #mainSlider {
+    height: 630px;
+  }
+  // main slider end
+
+  //   about start
+  #about {
+    background-position: 14% 32%;
+    background-size: 150%;
+    .row {
+      padding-bottom: 130px;
+      padding-top: 130px;
+      .left_side {
+        .img {
+          padding: 7%;
+          img {
+            width: 900px;
+            margin-left: -34%;
+          }
+        }
+      }
+      .right_side {
+        .content {
+          padding-left: 18.5% !important;
+          padding-right: 6% !important;
+        }
+      }
+    }
+  }
+
+  // about end
+
+  //   contact start
+
+  #contact {
+    .contact {
+      margin-top: -18%;
+    }
+  }
+
+  // contact end
+
+  //   diger xeber slider start
+  #digerXeber {
+    .left_side {
+      padding-left: 74px;
+    }
+
+    .right_side {
+      .owl-carousel {
+        .owl-stage-outer {
+          height: 560px;
+        }
+        .owl-item {
+          width: 340px !important;
+        }
+        .item {
+          .content {
+            // padding: 19px 13px;
+            height: 289px;
+          }
+        }
+      }
+    }
+  }
+
+  // diger xeber slider end
+}

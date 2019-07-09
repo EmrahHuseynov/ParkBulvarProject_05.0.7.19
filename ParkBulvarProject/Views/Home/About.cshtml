@@ -1,0 +1,35 @@
+﻿@model ParkBulvarProject.Models.ViewModels.HomeAboutViewModel
+@{
+    string lang = ViewBag.lang;
+}
+@if (Model.info != null&&Model.info.aboutUsPageDictionaries.FirstOrDefault(x=>x.Language.Code==lang)!=null)
+{
+
+    <section id="about">
+
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-5">
+                <div class="left_side">
+                    <div class="img">
+                        <img src="~/assets/img/about/haqqimizda.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-xl-7">
+                <div class="right_side">
+                    <div class="content">
+                        <h4 class="size25_r">Haqqımızda</h4>
+                        <h2>@Model.info.aboutUsPageDictionaries.FirstOrDefault(x => x.Language.Code == lang).Title</h2>
+                        <p class="size20_r">
+                           @Html.Raw(Model.info.aboutUsPageDictionaries.FirstOrDefault(x => x.Language.Code == lang).Text)
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about end -->
+
+}

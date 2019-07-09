@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ParkBulvarProject.Models.Entities.AdminConfig>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        İstifadəçilər
+    </div>
+    <div class="card-body">
+
+        <div class="text-center mb-3 mt-3">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="fas fa-plus"></i> Yenisini əlavə et
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Username)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Password)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Role)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Username)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Password)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Role)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas btn btn-primary fa-edit"></i></a>
+                            <a class="btn btn-danger" onclick="return confirm('Silmək istədiyinizdən əminsiniz?');" asp-action="DeleteConfirmed" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

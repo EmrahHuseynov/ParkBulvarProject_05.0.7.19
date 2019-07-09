@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ParkBulvarProject.Models.Entities.HomeSliderItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        Slayder şəkilləri
+    </div>
+    <div class="card-body">
+
+        <div class="text-center mb-3 mt-3">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="fas fa-plus"></i> Yenisini əlavə et
+            </a>
+        </div>
+
+        <table class="table" data-emrah="homeslideritems">
+            <thead>
+                <tr>
+                    <th>
+                       Şəkil
+                    </th>
+                    <th>Link</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr data-id="@item.Id">
+                    <td>
+                        <img src="~/assets/img/mainSlider/@item.Image" width="200" height="140" alt="Alternate Text" />
+                    </td>
+                    <td>
+                      @(item.Link==string.Empty||item.Link==null ? "Yoxdur" : "Var")
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas btn btn-primary fa-edit"></i></a>
+                        <a class="btn btn-danger" onclick="return confirm('Silmək istədiyinizdən əminsiniz?');" asp-action="DeleteConfirmed" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+

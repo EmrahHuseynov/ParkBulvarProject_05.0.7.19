@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ParkBulvarProject.Models.Entities.ShopCategory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <div class="card-header">
+        Yeməklər
+    </div>
+    <div class="card-body">
+
+        <div class="text-center mb-3 mt-3">
+            <a asp-action="Create" class="btn btn-success">
+                <i class="fas fa-plus"></i> Yenisini əlavə et
+            </a>
+        </div>
+
+        <table class="table" data-emrah="shopcategories">
+            <thead>
+                <tr>
+                    <th>Ad</th>
+                    <th>
+                       Logo
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                        <td>
+                            @item.ShopCategoryDictionaries.First().Name
+                        </td>
+                        <td>
+                            <img src="~/assets/img/iconSlider/@item.Logo" width="100" height="100" alt="Alternate Text" />
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas btn btn-primary fa-edit"></i></a>
+                            <a class="btn btn-danger" onclick="return confirm('Silmək istədiyinizdən əminsiniz?');" asp-action="DeleteConfirmed" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+
+

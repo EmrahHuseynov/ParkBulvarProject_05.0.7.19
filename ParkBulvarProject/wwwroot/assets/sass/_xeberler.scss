@@ -1,0 +1,141 @@
+// xeberin baslis hissesi start
+#newsMainHeader {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/newsList/news_back.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 311px;
+  .content {
+    color: #fff;
+    padding-top: 67px;
+    h4 {
+      margin-bottom: 17px;
+    }
+    p {
+      width: 61%;
+      opacity: 0.75;
+    }
+  }
+}
+// xeberin baslis hissesi end
+
+#xeberlerList {
+  // background-image: url("../img/newsList/xeberler_back.png");
+  overflow: hidden;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  .xeber {
+      margin-bottom: 56px;
+      &:last-child{
+          margin-bottom: 0px;
+      }
+    //   position: relative;
+
+    
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      .left_side {
+        width: 46.5%;
+        padding-top: 32px;
+        padding-bottom: 25px;
+        .content{
+            padding: 23px 46px  28px 0px;
+            position: relative;
+            .head{
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 44px;
+                span{
+                    &:nth-child(1){
+                        color: $color_darkblue;
+                    }
+                    &:nth-child(2){
+                        color: $color_gray;
+                    }
+                }
+            }
+
+            .body{
+                padding-bottom: 81px;
+                h2{
+                    color: $color_darkblue;
+                    margin-bottom: 25px;
+
+                }
+                p{
+                    color: $color_gray;
+                }
+            }
+            .foot{
+                a{
+                    color:#00527e !important;
+                    padding-right: 54px;
+                    padding-left: 54px;
+
+                    &:hover{
+                          background-image: $linear_gradient !important;
+                          color: white !important;
+                    }
+                }
+            }
+
+        }
+
+      }
+      .right_side {
+        width: 53.5%;
+        img {
+          width: 100%;
+          height: 460px;
+          object-fit: cover;
+          border-radius: 20px;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.12);
+        }
+      }
+    }
+
+
+    &.left_mobile{
+      display: none;
+    }
+
+    &.left{
+        .fix_background{
+            position: absolute;
+            width: 145%;
+            height: 100%;
+            top: 0;
+            left: -45%;
+            background-color: #fcfcfc;
+            z-index: -1;
+        }
+    }
+
+
+    &.right{
+
+        .fix_background{
+            position: absolute;
+            width: 145%;
+            height: 100%;
+            top: 0;
+            left: 0%;
+            background-color: #fcfcfc;
+            z-index: -1;
+        }
+        .wrapper{
+            .left_side{
+                .content{
+                    padding: 23px 0px 28px 46px;
+                }
+            }
+        }
+    }
+  }
+}
+
+
+// *{
+//   border: 1px solid ;
+// }

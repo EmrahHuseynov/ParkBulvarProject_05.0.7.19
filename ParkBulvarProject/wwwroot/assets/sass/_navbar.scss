@@ -1,0 +1,91 @@
+#navbar{
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+    .navbar{
+        padding-right: 0px;
+        padding-left: 0px;
+        .navbar-brand{
+            img{
+                max-width: 152px;
+            }
+        }
+        ul.navbar-nav{
+            position: relative;
+            span.line{
+                position: absolute;
+                top: -6%;
+                left: 2%;
+                transition: all 0.3s linear;
+            }
+
+            li.nav-item{
+                transition: all .3s linear;
+
+                a.nav-link{
+                    color: #242424;
+                    padding-right: 47px;
+                transition: all .3s linear;
+
+                }
+                &:last-child{
+                    a.nav-link{
+                        padding-right: 25px;
+                    }
+                }
+                &.language{
+                    a.nav-link{
+                        &::after{
+                            display: none;
+                        }
+                    }
+                    div.dropdown-menu{
+                        max-width: 60px;
+                        left: -6px;
+                        padding: .5rem 0;
+                        text-align: center;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.14);
+                        background-color: #fff;
+                        min-width:0px;
+                        a.dropdown-item{
+                            padding: 0.25rem 0.5rem;
+                            &:hover{
+                                background-image: $linear_gradient;
+                                color: white;
+                            }
+                            &.active{
+                                background-image: $linear_gradient;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                &.active_li{
+                    a.nav-link{
+                        font-family: $font_medium;
+
+                    }
+                }
+
+                &:hover{
+                    a.nav-link{
+                        font-family: $font_medium;
+
+                    }
+                }
+            }
+
+        }
+
+        button.search{
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 25px;
+            color: #242424;
+
+        }
+    }
+}

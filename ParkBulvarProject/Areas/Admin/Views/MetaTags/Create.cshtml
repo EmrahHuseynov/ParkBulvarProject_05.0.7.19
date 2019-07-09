@@ -1,0 +1,35 @@
+﻿@model ParkBulvarProject.Models.Entities.MetaTags
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Yenisini əlavə et
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="TagName" class="control-label"></label>
+                        <textarea asp-for="TagName" class="form-control"></textarea>
+                        <span asp-validation-for="TagName" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="col-md-12 mt-3">
+                        <a class="btn btn-dark" asp-action="index"><i class="fas fa-undo"></i> Siyahıya geri dön</a>
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

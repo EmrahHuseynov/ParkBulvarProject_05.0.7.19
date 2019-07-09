@@ -1,0 +1,79 @@
+﻿@model ParkBulvarProject.Models.ViewModels.ShopIndexViewModel
+@{ 
+    string lang = ViewBag.lang;
+}
+<section id="butunMagazalar">
+    <div class="container">
+        <div class="header">
+            <h4 class="size35_angel">Butun mağazalar</h4>
+        </div>
+
+        <div id="iconSlider">
+
+            <div class="iconSlider">
+                <div class="owl-carousel owl-theme">
+                    @{ 
+                        int i = 1;
+                    }
+                    @foreach (var item in Model.categories)
+                    {
+                        var dic = item.ShopCategoryDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                        if (dic != null)
+                        {
+                            <div class="item categories" data-id="@item.Id">
+                                <a href="#" class="icon_overlay" style="background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.35)), url(~/assets/img/iconSlider/@item.CoverImage) no-repeat center center;
+                                       background-size: cover;">
+
+                                    <div class="content">
+                                        <h2>@i</h2>
+                                        <h4 class="size20_m">@dic.Name</h4>
+                                    </div>
+                                </a>
+                                <div class="img">
+                                    <img src="~/assets/img/iconSlider/@item.Logo" alt="Park Bulvar">
+                                    <h4 class="size20_m">@dic.Name</h4>
+
+                                </div>
+                            </div>
+                            i++;
+                        }
+
+                    }
+                </div>
+                <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+
+            </div>
+
+        </div>
+
+        <div id="kategoriyaMagazalar">
+            <div class="kategoriyaMagazalar">
+                <div class="magazalar">
+                    @foreach (var item in Model.shops)
+                    {
+                        var dic = item.ShopDictionaries.FirstOrDefault();
+                        if (dic != null)
+                        {
+                            string ids = "";
+                            foreach (var cats in item.ShopToCategories)
+                            {
+                                ids += cats.ShopCategoryId.ToString()+" ";
+                            }
+                            if (ids.Length > 0)
+                            {
+                              ids=ids.Remove(ids.Length - 1);
+                            }
+                            <div class="magaza" cat-id="@ids">
+                                <a href="/home/model/@item.Id" class="overlay"></a>
+                                <img src="~/assets/img/magazalar/@item.Logo" alt="Park Bulvar">
+                            </div>
+                        }
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- butun magazalar end -->

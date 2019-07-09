@@ -1,0 +1,767 @@
+
+.owl-item {
+    overflow: auto;
+    cursor: grab;
+    cursor: -o-grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    width:100%;
+    height:auto;
+}
+    .owl-item::-webkit-scrollbar {
+        width: 0px; /* Remove scrollbar space */
+        background: transparent; /* Optional: just make scrollbar invisible */
+    }
+
+
+svg * {
+    pointer-events: all;
+    overflow: scroll;
+}
+.stm-2-0 {
+    fill: #FCFCFA;
+}
+.svg_box{
+    transition:all 0.4s linear;
+}
+
+.stm-2-1 {
+    fill: #F0F0F0;
+}
+
+.stm-2-2 {
+    fill: #FFFFFF;
+}
+
+.stm-2-3 {
+    fill: #A8A8A8;
+}
+
+.stm-2-4 {
+    font-family: 'Averta-Bold';
+}
+
+.stm-2-5 {
+    font-size: 10.8695px;
+}
+
+.stm-2-6 {
+    font-size: 14px;
+}
+
+.stm-2-7 {
+    letter-spacing: 14;
+}
+
+.stm-2-8 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-9 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-10 {
+    fill: #006397;
+}
+
+.stm-2-11 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-12 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-13 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-14 {
+    fill: #DFFF7F;
+}
+
+.stm-2-15 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-16 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-2-17 {
+    fill: none;
+}
+
+.stm-2-18 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+
+.stm-1-0 {
+    fill: #FCFCFA;
+}
+
+.stm-1-1 {
+    fill: #F0F0F0;
+}
+
+.stm-1-2 {
+    fill: #FFFFFF;
+}
+
+.stm-1-3 {
+    fill: #A8A8A8;
+}
+
+.stm-1-4 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-5 {
+    font-family: 'Averta-Bold';
+}
+
+.stm-1-6 {
+    font-size: 5.1256px;
+}
+
+.stm-1-7 {
+    font-size: 35.1854px;
+}
+
+.stm-1-8 {
+    font-size: 3.5396px;
+}
+
+.stm-1-9 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-10 {
+    fill: #006397;
+}
+
+.stm-1-11 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-12 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-13 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-14 {
+    fill: #DFFF7F;
+}
+
+.stm-1-15 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-16 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-1-17 {
+    fill: none;
+}
+
+.stm-1-18 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm1-0 {
+    fill: #FCFCFA;
+}
+
+.stm1-1 {
+    fill: #F0F0F0;
+}
+
+.stm1-2 {
+    fill: #FFFFFF;
+}
+
+.stm1-3 {
+    fill: #A8A8A8;
+}
+
+.stm1-4 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm1-5 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm1-6 {
+    fill: white;
+}
+
+.stm1-7 {
+    font-family: 'Averta-Bold';
+}
+
+.stm1-8 {
+    font-size: 8.3568px;
+}
+
+.stm1-9 {
+    font-size: 2.3261px;
+}
+
+.stm1-10 {
+    font-size: 2.2188px;
+}
+
+.stm1-11 {
+    font-size: 3.3318px;
+}
+
+.stm1-12 {
+    font-size: 7.7748px;
+}
+
+.stm1-13 {
+    font-size: 6.8319px;
+}
+
+.stm1-14 {
+    font-size: 5.5612px;
+}
+
+.stm1-15 {
+    font-size: 3.9939px;
+}
+
+.stm1-16 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm1-17 {
+    font-size: 4.274px;
+}
+
+.stm1-18 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm1-19 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm1-20 {
+    fill: #DFFF7F;
+}
+
+.stm1-21 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm1-22 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm1-23 {
+    fill: none;
+}
+
+.stm1-24 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.mango-restyle {
+    fill: #A8A8A8;
+}
+.stm2-0 {
+    fill: #FCFCFA;
+}
+
+.stm2-1 {
+    fill: #F0F0F0;
+}
+
+.stm2-2 {
+    fill: #FFFFFF;
+}
+
+.stm2-3 {
+    fill: #A8A8A8;
+}
+
+.stm2-4 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm2-5 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm2-6 {
+    fill: #006397;
+}
+
+.stm2-7 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm2-8 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm2-9 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm2-10 {
+    fill: #DFFF7F;
+}
+
+.stm2-11 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm2-12 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm2-13 {
+    font-family: 'Averta-Bold';
+}
+
+.stm2-14 {
+    font-size: 7.1105px;
+}
+
+.stm2-15 {
+    font-size: 3.4px;
+}
+
+.stm2-16 {
+    font-size: 7.0514px;
+}
+
+.stm2-17 {
+    font-size: 5.1657px;
+}
+
+.stm2-18 {
+    font-size: 6.7666px;
+}
+
+.stm2-19 {
+    font-size: 6.8093px;
+}
+
+.stm2-20 {
+    font-size: 4.659px;
+}
+
+.stm2-21 {
+    font-size: 6.6107px;
+}
+
+.stm2-22 {
+    font-size: 4.6343px;
+}
+
+.stm2-23 {
+    font-size: 2.4861px;
+}
+
+.stm2-24 {
+    font-size: 3.3968px;
+}
+
+.stm2-25 {
+    font-size: 4.2795px;
+}
+
+.stm2-26 {
+    fill: none;
+}
+
+.stm2-27 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-0 {
+    fill: #FCFCFA;
+}
+
+.stm-3-1 {
+    fill: #F0F0F0;
+}
+
+.stm-3-2 {
+    fill: #FFFFFF;
+}
+
+.stm-3-3 {
+    fill: #A8A8A8;
+}
+
+.stm-3-4 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-5 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-6 {
+    fill: #006397;
+}
+
+.stm-3-7 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-8 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-9 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-10 {
+    fill: #DFFF7F;
+}
+
+.stm-3-11 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-12 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-3-13 {
+    font-family: 'Averta-Bold';
+}
+
+.stm-3-14 {
+    font-size: 7.0651px;
+}
+
+.stm-3-15 {
+    font-size: 4.4393px;
+}
+
+.stm-3-16 {
+    font-family: 'Arial-BoldMT';
+}
+
+.stm-3-17 {
+    font-size: 4.5382px;
+}
+
+.stm-3-18 {
+    fill: none;
+}
+
+.stm-3-19 {
+    font-size: 2.2326px;
+}
+
+.stm-3-20 {
+    font-size: 5.0627px;
+}
+
+.stm-3-21 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+.stm-4-0 {
+    fill: #FCFCFA;
+}
+
+.stm-4-1 {
+    fill: #F0F0F0;
+}
+
+.stm-4-2 {
+    fill: #FFFFFF;
+}
+
+.stm-4-3 {
+    fill: #A8A8A8;
+}
+
+.stm-4-4 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-5 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-6 {
+    fill: #006397;
+}
+
+.stm-4-7 {
+    fill: none;
+    stroke: #767676;
+    stroke-width: 0.12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-8 {
+    fill: #FFFFFF;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-9 {
+    fill: #FFFFFF;
+    stroke: #000000;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-10 {
+    fill: #DFFF7F;
+}
+
+.stm-4-11 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-12 {
+    fill: none;
+    stroke: #C9C9C9;
+    stroke-width: 0.25;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.stm-4-13 {
+    fill: none;
+}
+
+.stm-4-14 {
+    font-family: 'Averta-Bold';
+}
+
+.stm-4-15 {
+    font-size: 7.8132px;
+}
+
+.stm-4-16 {
+    font-size: 5.9369px;
+}
+
+.stm-4-17 {
+    fill: none;
+    stroke: #D8D8D8;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10;
+}
+
+.hovered {
+    fill: #006397;
+    transition:all 0.4s linear;
+}
+.clicked {
+    fill: #006397;
+    transition: all 0.4s linear;
+}
+.whitetext {
+    fill: white;
+    transition: all 0.4s linear;
+}
+.clickedwhitetext {
+    fill: white;
+    transition: all 0.4s linear;
+}
+svg *[data-name],svg text{
+    cursor:pointer;
+}
+
+.zoomdiv button {
+    display: block;
+    width: 100%;
+    font-weight:bolder;
+    transition:all 0.4s linear;
+}
+    .zoomdiv button:nth-child(1) {
+        border-radius: 20px 20px 0 0;
+    }
+    .zoomdiv button:nth-child(2) {
+        border-radius: 0px 0px 20px 20px;
+    }
+
+.zoomdiv .active {
+   color:white !important;
+   background-color:black !important;
+}

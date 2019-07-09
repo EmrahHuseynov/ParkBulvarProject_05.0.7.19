@@ -1,0 +1,25 @@
+#butunMagazalar {
+  background-image: url("../img/magazalar/butunMagazalarBack.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 57px;
+  padding-bottom: 128px;
+
+  #iconSlider {
+    padding-top: 61px;
+    padding-bottom: 72px;
+    .iconSlider {
+      .owl-carousel {
+        margin-top: 0%;
+      }
+    }
+  }
+
+  #kategoriyaMagazalar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    .kategoriyaMagazalar{
+        padding-bottom: 0px;
+    }
+  }
+}

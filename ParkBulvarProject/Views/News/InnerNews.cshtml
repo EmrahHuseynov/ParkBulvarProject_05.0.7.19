@@ -1,0 +1,117 @@
+﻿@model ParkBulvarProject.Models.ViewModels.InnerNewsViewModel
+@{
+    string lang = ViewBag.lang;
+}
+
+<section id="esasXeber">
+    <div class="container">
+        @{
+            var dic = Model.news.NewsDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+        }
+        @if (dic != null)
+        {
+            <div class="xeberSlider">
+                <div class="owl-carousel owl-theme">
+                    @foreach (var item in Model.news.NewsImages)
+                    {
+                        <div class="item">
+                            <img src="~/assets/img/newsList/@item.Image" alt="Park Bulvar">
+                        </div>
+                    }
+                </div>
+                <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+            </div>
+            <div class="xeberInfo">
+                <div class="content">
+                    <div class="head">
+                        <ul>
+                            <li><a class="size20_sb">Xəbərlər</a></li>
+                            <li><a class="size20_r ">@Model.news.dateTime.ToString("dd-mm-yyyy")</a></li>
+                        </ul>
+                        <ul>
+                            <li><span class="size20_r">Paylaş</span></li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"><i class="fab fa-vk"></i></a></li>
+
+
+
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <h2 class="size35_angel">@dic.Title</h2>
+                        <p class="size20_r">
+                            @Html.Raw(dic.Text)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+</section>
+<!-- esas xeberin detali end -->
+<!-- diger xeberler start -->
+<section id="digerXeber">
+    <div class="row">
+        <div class="col-md-12 col-lg-4 left_side">
+            <div class="content">
+                <h2 class="size35_angel">Digər xəbərlər</h2>
+                <p class="size20_r">
+                    There are many variations of passages of Lorem Ipsum available, but the majority
+                    have suffered alteration in some
+                </p>
+                <span class="slider_btn prev_btn"><i class="fas fa-chevron-left"></i></span>
+                <span class="slider_btn next_btn"><i class="fas fa-chevron-right"></i></span>
+            </div>
+
+        </div>
+        <div class="col-md-12  col-lg-8 right_side">
+
+
+            <div class="owl-carousel owl-theme">
+                @foreach (var item in Model.othernews)
+                {
+                    var dic1 = item.NewsDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                    if (dic1 != null)
+                    {
+                        <div class="item">
+                            <a href="" class="overlay"></a>
+                            <div class="img">
+                                <img src="~/assets/img/xeberDetali/diger1.png" alt="">
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li class="head">
+                                        <span class="size15_sb">Xəbərlər</span>
+                                        <span class="size15_r">@item.dateTime.ToString("dd-mm-yyyy")</span>
+                                    </li>
+                                    <li class="body">
+                                        <h4 class="size25_angel">@dic1.Title</h4>
+                                        <p class="size15_r">
+                                            @Html.Raw(ParkBulvarProject.Helper.OzetCek(dic1.Text, 200))...
+                                        </p>
+                                    </li>
+                                    <li class="foot">
+                                        <a href="/news/innernews/@item.Id" class="size15_sb">Davamı<i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    }
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<!-- diger xeberler end -->

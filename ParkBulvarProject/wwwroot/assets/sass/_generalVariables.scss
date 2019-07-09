@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none ;
+    display: inline-block ;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('../fonts/Montserrat-SemiBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../fonts/Montserrat-Medium.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts//Montserrat-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../fonts/Montserrat-Black.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('../fonts/Montserrat-Thin.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Angelica-Pro';
+    src: url('../fonts/Anglecia-Pro-Display.otf') format('opentype');
+}
+
+@media screen and (min-width:1200px){
+    .container{
+        max-width: 1370px;
+    }
+}
+
+
+
+
+
+
+$font_semibold:"Montserrat-SemiBold";
+$font_medium:"Montserrat-Medium";
+$font_regular:"Montserrat-Regular";
+$font_bold:"Montserrat-Bold";
+$font_black:"Montserrat-Black";
+$font_thin:"Montserrat-Thin";
+$font_light:"Montserrat-Light";
+$font_angelica:"Angelica-Pro";
+
+
+
+$linear_gradient:linear-gradient(270deg, #0071ad 0%, #00527e 100%);
+$color_blue:#38548a;
+$color_darkblue:#006397;
+$color_gray:#818181;
+
+
+
+.size15_r{
+   font-size: 15px;
+   font-family: $font_regular; 
+}
+
+.size15_sb{
+    font-size: 15px;
+    font-family: $font_semibold; 
+ }
+.size20_r{
+    font-size: 20px;
+    font-family: $font_regular; 
+ }
+ .size20_m{
+    font-size: 20px;
+    font-family: $font_medium; 
+ }
+
+ .size20_sb{
+    font-size: 20px;
+    font-family: $font_semibold; 
+ }
+
+ .size20_angel{
+    font-size: 20px;
+    font-family: $font_angelica; 
+ }
+
+ .size25_r{
+    font-size: 25px;
+    font-family: $font_regular; 
+ }
+ .size25_m{
+    font-size: 25px;
+    font-family: $font_medium; 
+ }
+ 
+ .size25_angel{
+    font-size: 25px;
+    font-family: $font_angelica; 
+ }
+
+ .size25_sb{
+    font-size: 25px;
+    font-family: $font_semibold; 
+ }
+
+
+ .size35_r{
+    font-size: 35px;
+    font-family: $font_regular; 
+ }
+  .size35_angel{
+    font-size: 35px;
+    font-family: $font_angelica; 
+ }
+
+
+
+ span.line{
+     display: inline-block;
+     height:  2px;
+     width: 69px;
+     background-color: #242424;
+ }
+ a.overlay{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+ .main_btn{
+     display: inline-block;
+     border-radius: 30px;
+     padding: 14px 24px 12px;
+     color: white !important;
+     text-decoration: none !important;
+     transition: all 0.3s linear;
+     border: 1px solid #00527e;
+
+
+     &:hover{
+       color: #00527e !important;
+       background-image: linear-gradient(white,white) !important;
+     }
+ }
+
+
+
+
+

@@ -1,0 +1,180 @@
+﻿@model ParkBulvarProject.Models.Entities.Shop
+
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+    .dayinput{
+        width:calc(100%/7);
+    }
+</style>
+<div class="card">
+    <div class="card-header">
+        Yenisini əlavə et
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6 mt-4">
+                            <input asp-for="Image" class="form-control d-none" />
+                            <label class="btn btn-success" for="image">Şəkil Yüklə</label>
+                            <input  id="image" type="file" name="img" value="" class="d-none imginput" /> <br />
+                            <img src="#" class="editedImage newimage" style="display:none;" width="100" height="100" alt="Alternate Text" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6 mt-4">
+                            <input asp-for="Logo" class="form-control d-none" />
+                            <label class="btn btn-success" for="image1">Logo Yüklə</label>
+                            <input  id="image1" type="file" name="logo" value="" class="d-none imginput" /> <br />
+                            <img src="#" class="editedImage newimage" style="display:none;" width="100" height="100" alt="Alternate Text" />
+                            <span asp-validation-for="Logo" class="text-danger"></span>
+                        </div>
+                        <div class="form-group d-none">
+                            <label asp-for="Queue" class="control-label"></label>
+                            <input asp-for="Queue" class="form-control" />
+                            <span asp-validation-for="Queue" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label>Kateqoriya</label>
+                            <select class="form-control catselect">
+                                <option>Sec</option>
+                                @foreach (var item in db.shopCategories)
+                                {
+                                    <option value="@item.Id">@item.ShopCategoryDictionaries.First().Name</option>
+                                }
+                            </select>
+                            <span class="text-danger">Silmək istədyiniz komponentin üzərinə klik edin!</span>
+                            <div class="catwrapper">
+                              
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label  class="control-label">Alt Kateqoriya</label>
+                            <select class="form-control subcatselect">
+                                <option>Sec</option>
+                                @foreach (var item in db.subShopCategories)
+                                {
+                                    <option value="@item.Id">@item.SubShopCategoryDictionaries.First().Name</option>
+                                }
+                            </select>
+                            <span class="text-danger">Silmək istədyiniz komponentin üzərinə klik edin!</span>
+                            <div class="subcatwrapper">
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3">
+                            <label asp-for="Number" class="control-label"></label>
+                            <input asp-for="Number" class="form-control" />
+                            <span asp-validation-for="Number" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <label asp-for="Floor" class="control-label">Mərtəbə</label>
+                            <input asp-for="Floor" class="form-control" />
+                            <span asp-validation-for="Floor" class="text-danger"></span>
+                        </div>
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">Çalışma saatları</div>
+                                <div class="card-body">
+                                    <div class="row d-flex">
+                                        <div class="dayinput">
+                                            <label asp-for="day1" class="control-label"></label>
+                                            <input asp-for="day1" class="form-control" value="10:00 18:00" />
+                                            <span asp-validation-for="day1" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day2" class="control-label"></label>
+                                            <input asp-for="day2" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day2" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day3" class="control-label"></label>
+                                            <input asp-for="day3" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day3" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day4" class="control-label"></label>
+                                            <input asp-for="day4" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day4" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day5" class="control-label" .></label>
+                                            <input asp-for="day5" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day5" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day6" class="control-label"></label>
+                                            <input asp-for="day6" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day6" class="text-danger"></span>
+                                        </div>
+                                        <div class="dayinput">
+                                            <label asp-for="day7" class="control-label"></label>
+                                            <input asp-for="day7" class="form-control"  value="10:00 18:00" />
+                                            <span asp-validation-for="day7" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Tərcümə olunacaq dillər
+                                        </div>
+                                        <div class="card-body">
+                                            <ul class="nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+                                                @{
+                                                    int b = 0;
+                                                }
+                                                @foreach (var item in db.languages)
+                                                {
+                                                    <li style="width:32%" class="nav-item ml-2 bg-secondary ">
+                                                        <a class="nav-link @(b==0 ? "active" : "") text-white" id="pills-@item.Code-tab" data-toggle="pill" href="#pills-@item.Code" role="tab" aria-controls="pills-home" aria-selected="true">@item.Name</a>
+                                                    </li>
+                                                    b++;
+                                                }
+                                            </ul>
+                                            <div class="row justify-content-center">
+                                                <div class="col-md-6 col-6">
+                                                    <div class="tab-content" id="pills-tabContent ">
+                                                        @{
+                                                            int i = 0;
+                                                        }
+                                                        @foreach (var item in db.languages)
+                                                        {
+                                                        <div class="col-md-12 col-12 tab-pane fade @(i==0 ? "show active" : "")" id="pills-@item.Code" role="tabpanel">
+                                                            <label>Ad</label>
+                                                            <input type="text" class="form-control" name="Dictionary[@i].Name" value="" />
+                                                            <input type="hidden" class="form-control" name="Dictionary[@i].LanguageId" value="@item.Id" />
+                                                            <label>Məlumat</label>
+                                                            <textarea type="hidden" class="form-control ckeditor" name="Dictionary[@i].AboutText"></textarea>
+                                                        </div>
+                                                            i++;
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <a class="btn btn-dark" asp-action="index"><i class="fas fa-undo"></i> Siyahıya geri dön</a>
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

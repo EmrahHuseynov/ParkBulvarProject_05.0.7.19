@@ -1,0 +1,40 @@
+﻿@model ParkBulvarProject.Models.Entities.Tables.GeneralInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card">
+    <div class="card-header">
+        Düzəliş et
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <input asp-for="Phone" class="form-control" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="WorkHours" class="control-label"></label>
+                        <input asp-for="WorkHours" class="form-control" />
+                        <span asp-validation-for="WorkHours" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="HowToGo" class="control-label"></label>
+                        <input asp-for="HowToGo" class="form-control" />
+                        <span asp-validation-for="HowToGo" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                        <a class="btn btn-dark" asp-action="index"><i class="fas fa-undo"></i> Siyahıya geri dön</a>
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ParkBulvarProject.Models.Entities.Tables.NewsPage>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<div class="card">
+    <div class="card-header">
+        Xəbərlər səhifəsi
+    </div>
+    <div class="card-body">
+        @if (Model.Count() == 0)
+        {
+            <div class="text-center mb-3 mt-3">
+                <a asp-action="Create" class="btn btn-success">
+                    <i class="fas fa-plus"></i>  Əlavə et
+                </a>
+            </div>
+        }
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Başlıq
+                    </th>
+                    <th>
+                        Arxa plan
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @item.NewsPageDictionaries.First().Title
+                    </td>
+
+                    <td>
+                        <img src="~/assets/img/newsList/@item.Image" width="100" height="100" />
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas btn btn-primary fa-edit"></i></a>
+                        <a class="btn btn-danger" onclick="return confirm('Silmək istədiyinizdən əminsiniz?');" asp-action="DeleteConfirmed" asp-route-id="@item.Id"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    </div>
+
+       

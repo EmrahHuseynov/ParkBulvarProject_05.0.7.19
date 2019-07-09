@@ -1,0 +1,85 @@
+﻿@model ParkBulvarProject.Models.Entities.SubShopCategory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="card">
+    <div class="card-header">
+        Yenisini əlavə et
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group d-none">
+                        <label>Kateqoriya</label>
+                        <input asp-for="Queue" class="form-control" />
+                        <span asp-validation-for="Queue" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-4">
+                        <label asp-for="ShopCategoryId" class="control-label"></label>
+                        <select class="form-control" asp-for="ShopCategoryId">
+                            @foreach (var item in db.shopCategories)
+                            {
+                                <option value="@item.Id">@item.ShopCategoryDictionaries.First().Name</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Tərcümə olunacaq dillər
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="nav nav-pills mb-3 text-center" id="pills-tab" role="tablist">
+                                            @{
+                                                int b = 0;
+                                            }
+                                            @foreach (var item in db.languages)
+                                            {
+                                                <li style="width:32%" class="nav-item ml-2 bg-secondary ">
+                                                    <a class="nav-link @(b==0 ? "active" : "") text-white" id="pills-@item.Code-tab" data-toggle="pill" href="#pills-@item.Code" role="tab" aria-controls="pills-home" aria-selected="true">@item.Name</a>
+                                                </li>
+                                                b++;
+                                            }
+                                        </ul>
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-6 col-6">
+                                                <div class="tab-content" id="pills-tabContent ">
+                                                    @{
+                                                        int i = 0;
+                                                    }
+                                                    @foreach (var item in Model.SubShopCategoryDictionaries)
+                                                    {
+                                                    <div class="col-md-12 col-12 tab-pane fade @(i==0 ? "show active" : "")" id="pills-@item.Language.Code" role="tabpanel">
+                                                        <label>Ad</label>
+                                                        <input type="text" class="form-control" name="Dictionary[@i].Name" value="@item.Name" />
+                                                        <input type="hidden" class="form-control" name="Dictionary[@i].LanguageId" value="@item.LanguageId" />
+                                                        <input type="hidden" class="form-control" name="Dictionary[@i].SubShopCategoryId" value="@item.SubShopCategoryId" />
+                                                        <input type="hidden" class="form-control" name="Dictionary[@i].Id" value="@item.Id" />
+                                                    </div>
+                                                        i++;
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                        <a class="btn btn-dark" asp-action="index"><i class="fas fa-undo"></i> Siyahıya geri dön</a>
+                        <input type="submit" value="Əlavə et" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,59 @@
+﻿@model ParkBulvarProject.Models.ViewModels.ShopCategoriesViewModel
+@{
+    string lang = ViewBag.lang;
+}
+<section id="kategoriyaMagazalar">
+    <div class="container">
+        @if (Model.cat.SubShopCategories.Count() != 0)
+        {
+            foreach (var item in Model.cat.SubShopCategories)
+            {
+                var dic = item.SubShopCategoryDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                if (dic != null)
+                {
+                    <div class="kategoriyaMagazalar">
+                        <div class="header">
+                            <h4 class="size35_angel">@dic.Name</h4>
+                        </div>
+                        <div class="magazalar">
+                            @foreach (var rl in item.ShopToSubCategories.Skip(0).Take(10))
+                            {
+                                var dic1 = rl.Shop.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                                if (dic1 != null)
+                                {
+                                    <div class="magaza">
+                                        <a href="/home/model/" class="overlay"></a>
+                                        <img src="~/assets/img/magazalar/@rl.Shop.Logo" alt="Park Bulvar">
+                                    </div>
+                                }
+                            }
+                        </div>
+                        @if (item.ShopToSubCategories.Count > 10)
+                        {
+                            <div class="button">
+                                <a href="/shops/all/@item.Id" class="main_btn size20_m">Hamısına bax</a>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        }
+        else
+        {
+            <div class="magazalar">
+                @foreach (var rl in Model.cat.ShopToCategories)
+                {
+                    var dic1 = rl.Shop.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                    if (dic1 != null)
+                    {
+                        <div class="magaza">
+                            <a href="/home/model/" class="overlay"></a>
+                            <img src="~/assets/img/magazalar/@rl.Shop.Logo" alt="Park Bulvar">
+                        </div>
+                    }
+                }
+            </div>
+        }
+    </div>
+</section>
+

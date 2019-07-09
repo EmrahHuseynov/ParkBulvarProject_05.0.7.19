@@ -1,0 +1,78 @@
+﻿@model ParkBulvarProject.Models.Entities.Shop
+@{
+    string lang = ViewBag.lang;
+}
+@if (Model != null)
+{
+    var dic = Model.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+    if (dic != null)
+    {
+
+        <div class="img">
+            <img src="~/assets/img/magazalar/@Model.Image" alt="Park Bulvar" />
+        </div>
+        <div class="content">
+            <div class="head">
+                <h4 class="size25_sb">@dic.Name</h4>
+                <p>
+                    @Html.Raw(dic.AboutText)
+                </p>
+            </div>
+            <hr />
+            <div class="body">
+                <h6 class="size15_sb"><i class="far fa-clock"></i>İş saatları</h6>
+                <ul class="work_dates">
+                    <li class="size15_r">
+                        <h6>B.E</h6>
+                        <p>@Model.day1</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>Ç.A</h6>
+                        <p>@Model.day2</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>Ç</h6>
+                        <p>@Model.day3</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>C.A</h6>
+                        <p>@Model.day4</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>C</h6>
+                        <p>@Model.day5</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>Ş</h6>
+                        <p>@Model.day6</p>
+                    </li>
+                    <li class="size15_r">
+                        <h6>B</h6>
+                        <p>@Model.day7</p>
+                    </li>
+
+                </ul>
+            </div>
+            <hr />
+            <div class="foot">
+                <ul class="adress">
+                    <li class="size15_sb">
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            Əlaqə<span class="size15_r">@Model.Number</span>
+                        </p>
+                    </li>
+                    <li class="size15_sb">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Mərtəbə<span class="size15_r">@Model.Floor</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+    }
+
+
+}

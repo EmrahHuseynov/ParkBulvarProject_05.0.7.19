@@ -1,0 +1,54 @@
+﻿@model ParkBulvarProject.Models.ViewModels.HomeContactViewModel
+@{ 
+    string lang = ViewBag.lang;
+}    
+<!-- contact start -->
+<section id="contact">
+    <div class="background">
+        <div class="container">
+            <h4 class="size25_sb">Əlaqə</h4>
+        </div>
+    </div>
+    @if (Model.info != null)
+    {
+        <div class="contact">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="left_side">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.7124927228233!2d49.84756305475875!3d40.37089892292084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307dad090d9181%3A0x2b88981f2bd87785!2sPark+Bulvar!5e0!3m2!1str!2s!4v1560004672976!5m2!1str!2s"
+                                frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <div class="right_side">
+                        <ul class="info">
+                            <li>
+                                <p><i class="fas fa-phone "></i>@Model.info.Phone</p>
+                            </li>
+                            <li>
+                                <p><i class="far fa-clock"></i>@Model.info.WorkHours</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Bakı, Azərbaycan</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-bus"></i>Necə getmək olar?</p>
+                            </li>
+                            <li>
+                                <p>@Model.info.HowToGo</p>
+                            </li>
+
+
+                        </ul>
+                        <ul class="social">
+                            @foreach (var item in Model.sociallinks)
+                            {
+                                <li> <a href="@item.Link" target="_blank"><i class="@item.Icon"></i></a> </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+
+<!-- contact end -->

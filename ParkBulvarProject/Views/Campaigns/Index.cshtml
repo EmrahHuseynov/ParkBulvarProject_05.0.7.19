@@ -1,0 +1,52 @@
+﻿@model ParkBulvarProject.Models.ViewModels.CompaignsIndexViewModel
+@{
+    string lang = ViewBag.lang;
+}
+<!-- butun aksiyalar start -->
+
+<section id="butunAksiyalar">
+    <div class="container">
+        <div class="headers">
+            <span class="line mb-1"></span>
+            <h4 class="size35_angel">Aksiyalar</h4>
+        </div>
+
+        <div class="row aksiyalar ">
+            @foreach (var item in Model.campaigns)
+            {
+                var dic = item.CompaignDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                var shopdic = item.Shop.ShopDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                if (dic != null && shopdic != null)
+                {
+                    <div class="col-md-6  col-lg-4 col-xl-3 mainDiv">
+                        <div class="aksiya">
+                            <a href="#" class="overlay"></a>
+                            <div class="img">
+                                <img src="~/assets/img/eventSlider/@item.Image" alt="Park Bulvar">
+                            </div>
+                            <div class="content">
+                                <ul>
+
+                                    <li>
+                                        <h4 class="size20_sb">@shopdic.Name</h4>
+                                    </li>
+                                    <li>
+                                        <h4 class="size20_angel">@dic.Name</h4>
+                                    </li>
+                                    <li>
+                                        <p class="size15_r">@dic.Duration</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+        </div>
+
+    </div>
+</section>
+
+<!-- butun aksiyalar end -->

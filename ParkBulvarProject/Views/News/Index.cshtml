@@ -1,0 +1,146 @@
+﻿@model ParkBulvarProject.Models.ViewModels.NewsIndexViewModel
+@{
+    string lang = ViewBag.lang;
+}
+@if (Model.pageconfig != null)
+{
+    var dic = Model.pageconfig.NewsPageDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+    if (dic != null)
+    {
+        <!-- xeberler basliq start -->
+        <section id="newsMainHeader" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/img/newsList/@Model.pageconfig.Image);">
+            <div class="container">
+                <div class="content">
+                    <h4 class="size35_angel">@dic.Title</h4>
+                    <p class="size20_r">
+                        @dic.Text
+                    </p>
+                </div>
+            </div>
+        </section>
+    }
+}
+
+
+<!-- xeberler basliq end -->
+        <section id="xeberlerList">
+            @{
+                int i = 0;
+            }
+            @foreach (var item in Model.news)
+            {
+                var dic = item.NewsDictionaries.FirstOrDefault(x => x.Language.Code == lang);
+                if (dic != null)
+                {
+                    if (i % 2 == 0)
+                    {
+                            <!-- //////////// || sol xeber start || //////////// -->
+                            <div class="xeber left">
+                                <div class="container">
+                                    <div class="wrapper">
+                                        <div class="left_side">
+                                            <div class="content">
+                                                <div class="fix_background"></div>
+                                                <div class="head">
+                                                    <span class="size15_sb">Xəbərlər</span>
+                                                    <span class="size15_r">@item.dateTime.ToString("dd-m-yyyy")</span>
+                                                </div>
+
+                                                <div class="body">
+                                                    <h2 class="size35_angel">@dic.Title</h2>
+                                                    <p class="size15_r">
+                                                        @Html.Raw(ParkBulvarProject.Helper.OzetCek(dic.Text, 200))...
+                                                    </p>
+
+                                                </div>
+                                                <div class="foot">
+                                                    <a class="main_btn size20_m" href="/news/InnerNews/@item.Id">Davamı</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="right_side">
+                                            <img src="~/assets/img/newsList/@item.TitleImage" alt="Park Bulvar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="xeber left_mobile right">
+                                <div class="container">
+                                    <div class="wrapper">
+                                        <div class="right_side">
+                                            <img src="~/assets/img/newsList/@item.TitleImage" alt="Park Bulvar">
+                                        </div>
+                                        <div class="left_side">
+                                            <div class="content">
+                                                <div class="fix_background"></div>
+
+                                                <div class="head">
+                                                    <span class="size15_sb">Xəbərlər</span>
+                                                    <span class="size15_r">@item.dateTime.ToString("dd-mm-yyyy")</span>
+                                                </div>
+
+                                                <div class="body">
+                                                    <h2 class="size35_angel">@dic.Title</h2>
+                                                    <p class="size15_r">
+                                                        @Html.Raw(ParkBulvarProject.Helper.OzetCek(dic.Text, 200))...
+                                                    </p>
+                                                </div>
+                                                <div class="foot">
+                                                    <a class="main_btn size20_m" href="/news/InnerNews/@item.Id">Davamı</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ////////// sol xeber end ///////////// -->
+                    }
+                    else
+                    {
+                            <!-- ////////////// ||  sag xeber start ||//////////////// -->
+                            <div class="xeber right">
+                                <div class="container">
+                                    <div class="wrapper">
+                                        <div class="right_side">
+                                            <img src="~/assets/img/newsList/@item.TitleImage" alt="Park Bulvar">
+                                        </div>
+                                        <div class="left_side">
+                                            <div class="content">
+                                                <div class="fix_background"></div>
+
+                                                <div class="head">
+                                                    <span class="size15_sb">Xəbərlər</span>
+                                                    <span class="size15_r">@item.dateTime.ToString("dd-mm-yyyy")</span>
+                                                </div>
+
+                                                <div class="body">
+                                                    <h2 class="size35_angel">@dic.Title</h2>
+                                                    <p class="size15_r">
+                                                        @Html.Raw(ParkBulvarProject.Helper.OzetCek(dic.Text, 200))...
+                                                    </p>
+
+                                                </div>
+                                                <div class="foot">
+                                                    <a class="main_btn size20_m" href="/news/InnerNews/@item.Id">Davamı</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ///////////////   sag xeber end //////////////// -->
+                    }
+                    i++;
+
+                }
+
+            }
+        </section>
+
+
